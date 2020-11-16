@@ -17,3 +17,6 @@
 > Tkinkter is then used to display these objects in progress bars. The 'Labels' function helps the viewer to assess what bars correspond to the financial instrument (green used for bullish trends/red used for bearish/down-trends).
 
 > The programme is executed every morning where the user can swiftly assess the position of the closing price relative to both low and high parameters. It enables the viewer to save time and immediately access a visual representation of the previous day of trading in the financial markets.
+
+![ProgressBar Example](https://user-images.githubusercontent.com/72507931/99262531-06003300-2816-11eb-9b11-44f62ed1047f.JPG)
+
