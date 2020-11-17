@@ -1,7 +1,7 @@
 # FinancialMarkets_ProgressBars
 
 A data analysis and GUI (progress-bar) based program using ranges (derived from price/volume/volatility) and live closing price data. 
-The purpose of the project was to clearly present up-to-date financial market information in conjunction with self-generated data (proprietary price ranges).The user can swiftly access a visual representation of where closing price data is located relative to the low/top range parameters.
+The purpose of the project was to clearly present up-to-date financial market information in conjunction with self-generated data (proprietary price ranges). The user can swiftly access a visual representation of where closing price data is located relative to the low/top range parameters.
 
 
 ## Technologies
