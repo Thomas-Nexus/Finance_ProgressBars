@@ -41,7 +41,7 @@ A final time point is defined using ‘timedelta’ and ‘strftime’. This ena
 
 <b>Dataframe:</b>
 
-Daily closing prices from 11 asset classes are extracted using yfinance and are placed into a dataframe. The adjusted closing prices are extracted (‘extract_price’ function using ‘iloc’ and rounded to 2 decimal places.
+Daily closing prices from 11 asset classes are extracted using yfinance and are placed into a dataframe. The adjusted closing prices are extracted (‘extract_price’ function) using ‘iloc’ and rounded to 2 decimal places.
 
 <b>Progress-Bar Data:</b>
 
