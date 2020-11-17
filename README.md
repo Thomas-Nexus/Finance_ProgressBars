@@ -1,22 +1,63 @@
 # FinancialMarkets_ProgressBars
 
-> A pandas/tkinkter based programme using ranges (derived from price/volume/volatility) and live closing price metrics for 11 core financial instruments.
+A data analysis and GUI (progress-bar) based program using ranges (derived from price/volume/volatility) and live closing price data. 
+The purpose of the project was to clearly present up-to-date financial market information in conjunction with self-generated data (proprietary price ranges).The user can swiftly access a visual representation of where closing price data is located relative to the low/top range parameters.
 
-> A significant portion of the programme includes object orientated programming. Sections are displayed with a brief header to summarise the goal of the code below.
 
-> Manual inputs of proprietary price range data (upper/lower daily price bands) are inputted into an excel file. This file has several tabs that are used outside the scope of this programme as well (also used for price/volume repository).
+## Technologies
 
-> Daily closing prices from several cross-asset classes are extracted using yfinance and are placed into a dataframe. 
+- Language: Python 3.8.3
 
-> A specific time clamp is used to pinpoint the previous day's closing price irrespective of when the programme is executed (using datetime, timedelta and strftime).
+- Editor: PyCharm
 
-> The specific price is extracted from the dataframe & expressed to 2 decimal places using the function 'extract_price'.
+- Libraries:
+    - Yfinance
+    - Datetime
+    - Tkinkter
+    - Pandas
 
-> Progress bar data is then calculated using the function 'bar'. The closing price level is calculated relative to the ranges and expressed as a progress bar (in percentage terms). This value is defined as 'ProgressPCT'. Objects are then created using this function to define all percentage levels (e.g. 'DAX_PCT')
 
-> Tkinkter is then used to display these objects in progress bars. The 'Labels' function helps the viewer to assess what bars correspond to the financial instrument (green used for bullish trends/red used for bearish/down-trends).
+## Setup
 
-> The programme is executed every morning where the user can swiftly assess the position of the closing price relative to both low and high parameters. It enables the viewer to save time and immediately access a visual representation of the previous day of trading in the financial markets.
+The excel file containing the ranges is required to be stored on the user’s directory. This file has several tabs that are used outside the scope of this program as well. This is not attached, however a screenshot of the program GUI is included below.
+
+
+## Walkthrough
+
+Time Clamp:
+
+A final time point is defined using ‘timedelta’ and ‘strftime’. This enables the user to access up-to-date data whenever the program is executed.
+
+
+Ranges:
+
+Price ranges from a pre-existing excel file are accessed using pandas. Each low/high range parameter for each financial instrument are placed into objects to be used in later functions. Eleven financial markets are used (22 objects). 
+
+
+Time Clamp:
+
+A final time point is defined using ‘timedelta’ and ‘strftime’. This enables the user to access up-to-date data whenever the program is executed.
+
+
+Dataframe:
+
+Daily closing prices from 11 asset classes are extracted using yfinance and are placed into a dataframe. The adjusted closing prices are extracted (‘extract_price’ function using ‘iloc’ and rounded to 2 decimal places.
+
+Progress-Bar Data:
+
+The ‘bar’ function is used to define the gap between the ranges and calculate where the price is located relative to the range parameters. This distance is expressed as a percentage (object = ‘ProgressPCT’). The objects to be used in tkinkter are then defined (i.e. EUR_PCT).
+
+ GUI:
+ 
+- A tkinkter window is defined and the in-built property of progress-bars are configured. The progress-bar ‘values’ are then connected with the PCT objects mentioned above (‘PCT_Fill’ function).
+ - Labels and progress-bars are designed. Red bars are used for current bearish (down) trends and green bars are used for current bullish (up) trends. The ‘Finalise’ list is iterated over in a ‘for’ loop to pack every financial instrument into the window.
+- The user is able to gain a visual insight into the rate of change of price movements and the relationship of this with the dynamic ranges provided. This is used to aid investing/trading decision making.
+
+## Screenshot
 
 ![ProgressBar Example](https://user-images.githubusercontent.com/72507931/99262531-06003300-2816-11eb-9b11-44f62ed1047f.JPG)
 
+
+## Status
+
+Project completed.
